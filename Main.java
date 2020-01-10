@@ -7,6 +7,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         SiteConnect connection = new SiteConnect();
         connection.setURL(d.warframes[0].mainBP);
+        PriceCalculations calculate = new PriceCalculations(connection.prices);
+        System.out.println(calculate.getAverage());
         /*while (true)
         {
             System.out.println("Which warframe do you want to see?\n");
